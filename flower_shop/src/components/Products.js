@@ -1,8 +1,9 @@
 
 import '../assets/CSS/layout.css';
+import Product from './Product';
 
 
-export default function Products(){
+export default function Products(props){
    
     return(
         <>
@@ -13,7 +14,9 @@ export default function Products(){
                 <h4 className="card-title">Buy flowers</h4>
                 <div className="grid-container">
                     {
-                        //product
+                        props.products.map((pd)=>
+                            <Product pd = {pd}/>
+                        )
                     }
                 </div>
 
