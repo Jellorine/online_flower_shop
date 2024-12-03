@@ -20,14 +20,14 @@ export default function Product({ pd, onAddToCart }){
         <div className="grid-item">
 
             <div class="card">
-                <img  src ={require('../assets/image/'+props.pd.img)} alt="flower"/>
+                <img  src ={require('../assets/image/'+pd.img)} alt="flower"/>
                 <div class="card-body">
-                    <h5 class="card-title">Price:{props.pd.price}</h5>
+                    <h5 class="card-title">Price:{pd.price}</h5>
                     <div class="quantity-container">
                         <label for="quantity">Quantity:</label>
                         <input type="number" id="quantity" name="quantity"  value={qty} onChange={(e)=>{setQty(e.target.value)}}/>
                     </div>
-                    <button value={product} class="card-button" onClick={addToCart}>Add to Cart</button>
+                    <button class="card-button" onClick={addToCart}>Add to Cart</button>
                 </div>
             </div>
         </div>
