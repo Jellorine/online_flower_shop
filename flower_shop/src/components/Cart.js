@@ -1,4 +1,5 @@
 export default function Cart({cartItems}) {
+    const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
     
     return (
         <div className="table-container">
@@ -24,7 +25,7 @@ export default function Cart({cartItems}) {
                 }
                 <tr>
                     <td >Grand Total : </td>
-                    <td colSpan={2}></td>
+                    <td colSpan={2}>${totalPrice}</td>
                 </tr>
             </table>
            
